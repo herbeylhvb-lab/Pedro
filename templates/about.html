@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}About &middot; Pedro Cardenas{% endblock %}
+
+{% block content %}
+<section class="section">
+  <div class="container">
+    <h2>About Pedro Cardenas</h2>
+
+    <div class="about-grid">
+      <div class="photo-wrap">
+        <img src="{{ url_for('static', filename='placeholder-photo.svg') }}" alt="Pedro Cardenas">
+        <p class="caption">Official photo</p>
+      </div>
+
+      <div>
+        <p>
+          Pedro E. Cardenas serves the residents of District 4 on the Brownsville City Commission.
+          First elected in June 2021 and re-elected in June 2025, he brings a background in business
+          administration and account management to his work on the Commission.
+        </p>
+
+        <p>
+          Pedro holds a Bachelor of Business Administration from Tecnol&oacute;gico de Monterrey (2003).
+          Before entering public service, he built a career in business and account management,
+          experience that shapes his focus on fiscal responsibility and practical results at City Hall.
+        </p>
+
+        <p>
+          As Commissioner, Pedro has championed infrastructure investment, including the $14 million
+          reconstruction of Old Highway 77, and has worked to strengthen public safety, support local
+          small businesses, and keep essential services affordable and reliable for District 4 families.
+        </p>
+
+        <p>
+          His current term runs through May 2029.
+        </p>
+
+        <h3>At a glance</h3>
+        <ul>
+          <li><strong>Office:</strong> Brownsville City Commissioner, District 4</li>
+          <li><strong>First elected:</strong> June 2021</li>
+          <li><strong>Reelected:</strong> June 2025</li>
+          <li><strong>Education:</strong> BBA, Tecnol&oacute;gico de Monterrey (2003)</li>
+          <li><strong>Term ends:</strong> May 2029</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
