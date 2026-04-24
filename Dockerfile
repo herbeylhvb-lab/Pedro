@@ -10,4 +10,4 @@ COPY . .
 ENV PORT=8080
 EXPOSE 8080
 
-CMD gunicorn server:app --bind 0.0.0.0:$PORT --workers 2 --access-logfile -
+CMD ["sh", "-c", "gunicorn server:app --bind 0.0.0.0:${PORT} --workers 2 --access-logfile -"]
