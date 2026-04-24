@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}Join the List &middot; Pedro Cardenas{% endblock %}
+
+{% block content %}
+<section class="section">
+  <div class="container">
+    <h2>Join the List</h2>
+    <p>
+      Get occasional text updates from Pedro Cardenas about District 4 priorities,
+      community events, and important City Commission decisions.
+    </p>
+
+    {% if error %}
+      <div class="form-error" role="alert">{{ error }}</div>
+    {% endif %}
+
+    <form class="signup" method="POST" action="{{ url_for('join') }}" novalidate>
+      <label for="first_name">First name</label>
+      <input type="text" id="first_name" name="first_name" required autocomplete="given-name">
+
+      <label for="last_name">Last name</label>
+      <input type="text" id="last_name" name="last_name" required autocomplete="family-name">
+
+      <label for="phone">Mobile phone</label>
+      <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="(956) 555-0123">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required autocomplete="email">
+
+      <label for="zip">ZIP code</label>
+      <input type="text" id="zip" name="zip" required autocomplete="postal-code" pattern="[0-9]{5}" maxlength="5">
+
+      <div class="consent-box">
+        <label for="consent">
+          <input type="checkbox" id="consent" name="consent" value="yes">
+          <span class="disclosure-text">
+            By checking this box, I consent to receive recurring automated text messages from
+            Pedro Cardenas for City Commissioner at the phone number provided.
+            Consent is not a condition of any purchase. Msg&amp;data rates may apply.
+            Msg frequency varies. Reply HELP for help, STOP to cancel.
+            <a href="{{ url_for('sms_terms') }}" target="_blank" rel="noopener">SMS Terms</a>
+            and
+            <a href="{{ url_for('privacy') }}" target="_blank" rel="noopener">Privacy Policy</a>.
+          </span>
+        </label>
+      </div>
+
+      <button type="submit" class="submit">Sign me up</button>
+    </form>
+  </div>
+</section>
+{% endblock %}
