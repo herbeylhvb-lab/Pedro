@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Pedro Cardenas &middot; Brownsville City Commissioner, District 4{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="container">
+    <h1>Pedro Cardenas</h1>
+    <p class="tagline">Brownsville City Commissioner &middot; District 4</p>
+    <p class="intro">
+      Working for the residents of District 4 with a focus on infrastructure,
+      public safety, and economic opportunity. Stay connected to what is
+      happening in our community.
+    </p>
+    <a href="{{ url_for('join') }}" class="btn-cta">Stay in touch</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Priorities</h2>
+    <p>Focused on the work that matters most to District 4 residents.</p>
+
+    <div class="priority-grid">
+      <div class="priority-card">
+        <h3>Infrastructure</h3>
+        <p>Continuing investment in streets, drainage, and long-overdue projects like the Old Highway 77 reconstruction.</p>
+      </div>
+      <div class="priority-card">
+        <h3>Public Safety</h3>
+        <p>Supporting first responders and building safer neighborhoods that families can be proud to call home.</p>
+      </div>
+      <div class="priority-card">
+        <h3>Economic Opportunity</h3>
+        <p>Backing small businesses and making sure Brownsville residents share in the city&rsquo;s growth.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <h2>Get Involved</h2>
+    <p>Sign up for text updates on the work happening in District 4.</p>
+    <a href="{{ url_for('join') }}" class="btn-cta">Join the list</a>
+  </div>
+</section>
+{% endblock %}
