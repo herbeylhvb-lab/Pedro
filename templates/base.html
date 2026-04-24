@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Pedro Cardenas for Brownsville City Commissioner, District 4{% endblock %}</title>
+  <meta name="description" content="Official site of Pedro Cardenas, Brownsville City Commissioner for District 4.">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="{{ url_for('home') }}" class="brand">
+        <span class="brand-name">Pedro Cardenas</span>
+        <span class="brand-office">Brownsville City Commissioner &middot; District 4</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('issues') }}">Issues</a>
+        <a href="{{ url_for('join') }}" class="nav-cta">Join</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="political-disclosure">
+        Political advertising paid for by [CAMPAIGN COMMITTEE NAME], [TREASURER NAME], Treasurer.
+      </p>
+      <nav class="footer-nav" aria-label="Legal">
+        <a href="{{ url_for('privacy') }}">Privacy Policy</a>
+        <a href="{{ url_for('sms_terms') }}">SMS Terms</a>
+        <a href="{{ url_for('terms') }}">Terms of Use</a>
+      </nav>
+      <p class="copyright">&copy; 2026 Pedro Cardenas for City Commissioner. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
